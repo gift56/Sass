@@ -1,0 +1,49 @@
+@import 'variable';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: $try-color;
+    font-family: $font-min;
+    line-height: 1.9;
+}
+
+.works{
+    @include set-background($bgcolorh);
+    height: 550px; 
+    width: 84vw;
+    margin: 8vw;
+    border: 6px solid lighten($bgcolorh, 15%);
+    overflow: $overflow;
+
+    &-contain{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 4vw;
+        align-items: center;
+
+        .logo{
+            width: 100px;
+        }
+        
+        .hhuh{
+            border-radius: 999px;
+            width: 30vw;
+            margin: 10vh 9vw;    
+        }
+        nav{            
+            h1{
+                font-size: 18px;
+            }
+
+            h2{
+                font-size: 45px;
+            }
+        }
+    }
+
+}
+
+@import 'mobile';

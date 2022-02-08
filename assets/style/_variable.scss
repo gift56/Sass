@@ -1,0 +1,20 @@
+$try-color: #ffff;
+$font-min: Arial, Helvetica, sans-serif;
+// $bgcolorh: rgb(245, 24, 245);
+$bgcolorh: rgb(245, 240, 245);
+$text-color: white;
+$overflow: auto;
+
+// Set text color based on bg
+@function set-text-color($colors){
+    @if(lightness($colors) > 70) {
+        @return #333;
+    } @else {
+        @return #ffff;
+    }
+}
+// Set background & text color
+@mixin set-background($color)  {
+    background-color: $color;
+    color: set-text-color($color);
+}

@@ -1,0 +1,13 @@
+@media(max-width: 700px) {
+    .works {
+        height: 400px;
+
+        &-contain{
+            text-align: center;
+
+            .hhuh{
+                display: none;
+            }
+        }
+    }
+}
